@@ -97,7 +97,7 @@ app.get("/api/products/create", async (_req, res) => {
   try {
     await productCreator(res.locals.shopify.session);
   } catch (e) {
-    console.log(`Failed to process products/create: ${e.message}`);
+    console.log(`Failed to process products/create : ${e.message}`);
     status = 500;
     error = e.message;
   }
